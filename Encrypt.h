@@ -9,17 +9,20 @@ public:
 
     Encrypt();
 
-    std::string get_plain() const ;
+    std::string getPlain() const ;
 
-    std::string get_cipher()const ;
+    std::string getCipher()const ;
 
     bool read(bool isPlain, std::string filename);
 
     bool write(bool isPlain, std::string filename);
 
-    std::string encode();
+    virtual std::string encode();
 
-    std::string decode();
+    virtual std::string decode();
+
+    void setPlain(std::string code);
+    void setCipher(std::string code);
 
 protected:
 

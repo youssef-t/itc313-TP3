@@ -7,11 +7,11 @@ Encrypt::Encrypt(){
 
 
 //getters
-std::string Encrypt::get_plain() const {
+std::string Encrypt::getPlain() const {
 	return m_plain;
 }
 
-std::string Encrypt::get_cipher() const{
+std::string Encrypt::getCipher() const{
 	return m_cipher;
 }
 
@@ -78,4 +78,12 @@ std::string Encrypt::decode(){
 	//copier le message chiffré dans la variable contenant le message non chiffré
 	m_plain = m_cipher ;
 	return plain;
+}
+
+void Encrypt::setPlain(std::string code){
+	m_plain = code ;
+}
+
+void Encrypt::setCipher(std::string code){
+	m_cipher = code ;
 }
